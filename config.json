@@ -2,41 +2,71 @@
   "events": [
     {
       "name": "Vorago",
-      "max_attendees": 10,
-      "multiple_roles": true,
+      "max_attendees": 4,
+      "multiple_roles": false,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 1},
-        {"name": "Bomb Tank", "emoji": "💣", "max": 1},
-        {"name": "DPS", "emoji": "⚔️", "max": 8}
-      ]
-    },
-    {
-      "name": "AOD",
-      "max_attendees": 7,
-      "multiple_roles": true,
-      "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 1},
-        {"name": "Minion Tank", "emoji": "🪖", "max": 1},
-        {"name": "DPS", "emoji": "⚔️", "max": 5}
-      ]
-    },
-    {
-      "name": "Solak",
-      "max_attendees": 7,
-      "multiple_roles": true,
-      "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 2},
-        {"name": "DPS", "emoji": "⚔️", "max": 5}
+        {"name": "Base", "emoji": "🛡️", "min": 1, "max": 1, "exclusive_with": ["Bomb Tank", "TL5", "DPS"]},
+        {"name": "Bomb Tank", "emoji": "💣", "min": 1, "max": 2},
+        {"name": "TL5", "emoji": "🔷"},
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     },
     {
       "name": "Vorago (Hard Mode)",
       "max_attendees": 10,
+      "multiple_roles": false,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "min": 1, "max": 1, "exclusive_with": ["Bomb Tank", "TL5", "DPS"]},
+        {"name": "Bomb Tank", "emoji": "💣", "min": 1, "max": 2},
+        {"name": "TL5", "emoji": "🔷"},
+        {"name": "DPS", "emoji": "⚔️"}
+      ]
+    },
+    {
+      "name": "Nex: Angel of Death (AOD)",
+      "max_attendees": 7,
       "multiple_roles": true,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 1},
-        {"name": "Bomb Tank", "emoji": "💣", "max": 1},
-        {"name": "DPS", "emoji": "⚔️", "max": 8}
+        {"name": "Base", "emoji": "🛡️", "min": 1, "max": 1, "exclusive_with": ["Hammer", "Smoke Cloud", "Umbra", "Glacies", "Cruor", "Fumus"]},
+        {"name": "Hammer", "emoji": "🔨", "min": 1},
+        {"name": "Smoke Cloud", "emoji": "☁️", "min": 1},
+        {"name": "Umbra", "emoji": "⚔️", "exclusive_with": ["Glacies", "Cruor", "Fumus"]},
+        {"name": "Glacies", "emoji": "❄️", "exclusive_with": ["Umbra", "Cruor", "Fumus"]},
+        {"name": "Cruor", "emoji": "🩸", "exclusive_with": ["Umbra", "Glacies", "Fumus"]},
+        {"name": "Fumus", "emoji": "☁️", "exclusive_with": ["Umbra", "Glacies", "Cruor"]}
+      ]
+    },
+    {
+      "name": "Solak (duo)",
+      "max_attendees": 2,
+      "multiple_roles": false,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "min": 1, "exclusive_with": ["Elf"]},
+        {"name": "Elf", "emoji": "🧝", "min": 1}
+      ]
+    },
+    {
+      "name": "Solak (trio)",
+      "max_attendees": 3,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "min": 1, "exclusive_with": ["Elf", "South", "North"]},
+        {"name": "Elf", "emoji": "🧝", "min": 1},
+        {"name": "South", "emoji": "⬇️", "exclusive_with": ["Base"]},
+        {"name": "North", "emoji": "⬆️", "exclusive_with": ["Base"]}
+      ]
+    },
+    {
+      "name": "Solak (4-7 man)",
+      "max_attendees": 7,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "min": 1, "exclusive_with": ["Elf", "North-west", "North-east", "South-east", "South-west"]},
+        {"name": "Elf", "emoji": "🧝", "min": 2},
+        {"name": "North-west", "emoji": "↖️", "exclusive_with": ["Base"]},
+        {"name": "North-east", "emoji": "↗️", "exclusive_with": ["Base"]},
+        {"name": "South-east", "emoji": "↘️", "exclusive_with": ["Base"]},
+        {"name": "South-west", "emoji": "↙️", "exclusive_with": ["Base"]}
       ]
     },
     {
@@ -44,8 +74,8 @@
       "max_attendees": 10,
       "multiple_roles": true,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 2},
-        {"name": "DPS", "emoji": "⚔️", "max": 8}
+        {"name": "Base", "emoji": "🛡️", "min": 2, "exclusive_with": ["DPS"]},
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     },
     {
@@ -53,7 +83,7 @@
       "max_attendees": 1,
       "multiple_roles": false,
       "roles": [
-        {"name": "DPS", "emoji": "⚔️", "max": 1}
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     },
     {
@@ -61,8 +91,8 @@
       "max_attendees": 8,
       "multiple_roles": true,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 2},
-        {"name": "DPS", "emoji": "⚔️", "max": 6}
+        {"name": "Base", "emoji": "🛡️", "min": 2, "exclusive_with": ["DPS"]},
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     },
     {
@@ -70,8 +100,8 @@
       "max_attendees": 7,
       "multiple_roles": true,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 1},
-        {"name": "DPS", "emoji": "⚔️", "max": 6}
+        {"name": "Base", "emoji": "🛡️", "min": 1, "exclusive_with": ["DPS"]},
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     },
     {
@@ -79,8 +109,8 @@
       "max_attendees": 5,
       "multiple_roles": true,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 1},
-        {"name": "DPS", "emoji": "⚔️", "max": 4}
+        {"name": "Base", "emoji": "🛡️", "min": 1, "exclusive_with": ["DPS"]},
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     },
     {
@@ -88,8 +118,8 @@
       "max_attendees": 6,
       "multiple_roles": true,
       "roles": [
-        {"name": "Base", "emoji": "🛡️", "max": 4},
-        {"name": "DPS", "emoji": "⚔️", "max": 2}
+        {"name": "Base", "emoji": "🛡️", "min": 4, "exclusive_with": ["DPS"]},
+        {"name": "DPS", "emoji": "⚔️"}
       ]
     }
   ]
