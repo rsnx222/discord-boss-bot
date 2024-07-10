@@ -1,25 +1,84 @@
 {
     "events": [
         {
-            "name": "Boss Raid",
-            "description": "A challenging boss fight event.",
-            "max_attendees": 10,
+            "name": "Dungeon Raid",
+            "description": "A dangerous raid into the dark dungeons.",
             "multiple_roles": false,
+            "max_attendees": 8,
             "roles": [
-                {"name": "Tank", "max": 2, "exclusive_with": ["DPS"], "emoji": "🛡️"},
-                {"name": "Healer", "max": 2, "exclusive_with": [], "emoji": "💉"},
-                {"name": "DPS", "max": 6, "exclusive_with": ["Tank"], "emoji": "⚔️"}
+                {
+                    "name": "Tank",
+                    "max": 2,
+                    "exclusive_with": ["Healer"],
+                    "emoji": "🛡️"
+                },
+                {
+                    "name": "Healer",
+                    "max": 2,
+                    "emoji": "💉"
+                },
+                {
+                    "name": "DPS",
+                    "max": 4,
+                    "emoji": "⚔️"
+                }
             ]
         },
         {
-            "name": "Dungeon Run",
-            "description": "A cooperative dungeon run event.",
-            "max_attendees": 5,
+            "name": "Dragon Hunt",
+            "description": "Join the hunt to defeat the mighty dragon.",
             "multiple_roles": true,
+            "max_attendees": 10,
             "roles": [
-                {"name": "Tank", "max": 1, "exclusive_with": [], "emoji": "🛡️"},
-                {"name": "Healer", "max": 1, "exclusive_with": [], "emoji": "💉"},
-                {"name": "DPS", "max": 3, "exclusive_with": [], "emoji": "⚔️"}
+                {
+                    "name": "Tank",
+                    "max": 2,
+                    "exclusive_with": ["Healer"],
+                    "emoji": "🛡️"
+                },
+                {
+                    "name": "Healer",
+                    "max": 2,
+                    "emoji": "💉"
+                },
+                {
+                    "name": "DPS",
+                    "max": 4,
+                    "emoji": "⚔️"
+                },
+                {
+                    "name": "Scout",
+                    "max": 2,
+                    "emoji": "🔭"
+                }
+            ]
+        },
+        {
+            "name": "Castle Siege",
+            "description": "Prepare for a large-scale battle to siege the castle.",
+            "multiple_roles": true,
+            "max_attendees": 15,
+            "roles": [
+                {
+                    "name": "Commander",
+                    "max": 1,
+                    "emoji": "👑"
+                },
+                {
+                    "name": "Soldier",
+                    "max": 10,
+                    "emoji": "⚔️"
+                },
+                {
+                    "name": "Archer",
+                    "max": 5,
+                    "emoji": "🏹"
+                },
+                {
+                    "name": "Medic",
+                    "max": 3,
+                    "emoji": "💊"
+                }
             ]
         }
     ]
