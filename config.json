@@ -1,85 +1,96 @@
 {
-    "events": [
-        {
-            "name": "Dungeon Raid",
-            "description": "A dangerous raid into the dark dungeons.",
-            "multiple_roles": false,
-            "max_attendees": 8,
-            "roles": [
-                {
-                    "name": "Tank",
-                    "max": 2,
-                    "exclusive_with": ["Healer"],
-                    "emoji": "🛡️"
-                },
-                {
-                    "name": "Healer",
-                    "max": 2,
-                    "emoji": "💉"
-                },
-                {
-                    "name": "DPS",
-                    "max": 4,
-                    "emoji": "⚔️"
-                }
-            ]
-        },
-        {
-            "name": "Dragon Hunt",
-            "description": "Join the hunt to defeat the mighty dragon.",
-            "multiple_roles": true,
-            "max_attendees": 10,
-            "roles": [
-                {
-                    "name": "Tank",
-                    "max": 2,
-                    "exclusive_with": ["Healer"],
-                    "emoji": "🛡️"
-                },
-                {
-                    "name": "Healer",
-                    "max": 2,
-                    "emoji": "💉"
-                },
-                {
-                    "name": "DPS",
-                    "max": 4,
-                    "emoji": "⚔️"
-                },
-                {
-                    "name": "Scout",
-                    "max": 2,
-                    "emoji": "🔭"
-                }
-            ]
-        },
-        {
-            "name": "Castle Siege",
-            "description": "Prepare for a large-scale battle to siege the castle.",
-            "multiple_roles": true,
-            "max_attendees": 15,
-            "roles": [
-                {
-                    "name": "Commander",
-                    "max": 1,
-                    "emoji": "👑"
-                },
-                {
-                    "name": "Soldier",
-                    "max": 10,
-                    "emoji": "⚔️"
-                },
-                {
-                    "name": "Archer",
-                    "max": 5,
-                    "emoji": "🏹"
-                },
-                {
-                    "name": "Medic",
-                    "max": 3,
-                    "emoji": "💊"
-                }
-            ]
-        }
-    ]
+  "events": [
+    {
+      "name": "Vorago",
+      "max_attendees": 10,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 1},
+        {"name": "Bomb Tank", "emoji": "💣", "max": 1},
+        {"name": "DPS", "emoji": "⚔️", "max": 8}
+      ]
+    },
+    {
+      "name": "AOD",
+      "max_attendees": 7,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 1},
+        {"name": "Minion Tank", "emoji": "🪖", "max": 1},
+        {"name": "DPS", "emoji": "⚔️", "max": 5}
+      ]
+    },
+    {
+      "name": "Solak",
+      "max_attendees": 7,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 2},
+        {"name": "DPS", "emoji": "⚔️", "max": 5}
+      ]
+    },
+    {
+      "name": "Vorago (Hard Mode)",
+      "max_attendees": 10,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 1},
+        {"name": "Bomb Tank", "emoji": "💣", "max": 1},
+        {"name": "DPS", "emoji": "⚔️", "max": 8}
+      ]
+    },
+    {
+      "name": "Raids",
+      "max_attendees": 10,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 2},
+        {"name": "DPS", "emoji": "⚔️", "max": 8}
+      ]
+    },
+    {
+      "name": "Vorkath",
+      "max_attendees": 1,
+      "multiple_roles": false,
+      "roles": [
+        {"name": "DPS", "emoji": "⚔️", "max": 1}
+      ]
+    },
+    {
+      "name": "Croesus",
+      "max_attendees": 8,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 2},
+        {"name": "DPS", "emoji": "⚔️", "max": 6}
+      ]
+    },
+    {
+      "name": "Zamorak Lord of Chaos",
+      "max_attendees": 7,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 1},
+        {"name": "DPS", "emoji": "⚔️", "max": 6}
+      ]
+    },
+    {
+      "name": "Kerapac",
+      "max_attendees": 5,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 1},
+        {"name": "DPS", "emoji": "⚔️", "max": 4}
+      ]
+    },
+    {
+      "name": "Rise of the Six",
+      "max_attendees": 6,
+      "multiple_roles": true,
+      "roles": [
+        {"name": "Base", "emoji": "🛡️", "max": 4},
+        {"name": "DPS", "emoji": "⚔️", "max": 2}
+      ]
+    }
+  ]
 }
